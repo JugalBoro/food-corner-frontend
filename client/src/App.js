@@ -14,7 +14,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route
-            path="/"
+            path="https://food-corner-backend.onrender.com/"
             element={
               <ProtectedRoute>
                 <Homepage />
@@ -22,7 +22,7 @@ function App() {
             }
           />
           <Route
-            path="/items"
+            path="https://food-corner-backend.onrender.com/items"
             element={
               <ProtectedRoute>
                 <ItemPage />
@@ -30,7 +30,7 @@ function App() {
             }
           />
           <Route
-            path="/cart"
+            path="https://food-corner-backend.onrender.com/cart"
             element={
               <ProtectedRoute>
                 <CartPage />
@@ -38,7 +38,7 @@ function App() {
             }
           />
           <Route
-            path="/bills"
+            path="https://food-corner-backend.onrender.com/bills"
             element={
               <ProtectedRoute>
                 <BillsPage />
@@ -46,20 +46,37 @@ function App() {
             }
           />
           <Route
-            path="/customers"
+            path="https://food-corner-backend.onrender.com/customers"
             element={
               <ProtectedRoute>
                 <CutomerPage />
               </ProtectedRoute>
             }
           />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
+          <Route
+            path="https://food-corner-backend.onrender.com/login"
+            element={<Login />}
+          />
+          <Route
+            path="https://food-corner-backend.onrender.com/register"
+            element={<Register />}
+          />
         </Routes>
       </BrowserRouter>
     </>
   );
 }
+
+export default App;
+
+export function ProtectedRoute({ children }) {
+  if (localStorage.getItem("auth")) {
+    return children;
+  } else {
+    return <Navigate to="/login" />;
+  }
+}
+
 
 export default App;
 
