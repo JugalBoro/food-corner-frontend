@@ -104,10 +104,13 @@ const ItemPage = () => {
         dispatch({
           type: "SHOW_LOADING",
         });
-        await axios.put("/api/items/edit-item", {
-          ...value,
-          itemId: editItem._id,
-        });
+        await axios.put(
+          "https://food-corner-backend.onrender.com/api/items/edit-item",
+          {
+            ...value,
+            itemId: editItem._id,
+          }
+        );
         message.success("Item Updated Succesfully");
         getAllItems();
         setPopupModal(false);
@@ -139,13 +142,11 @@ const ItemPage = () => {
             setEditItem(null);
             setPopupModal(false);
           }}
-          footer={false}
-        >
+          footer={false}>
           <Form
             layout="vertical"
             initialValues={editItem}
-            onFinish={handleSubmit}
-          >
+            onFinish={handleSubmit}>
             <Form.Item name="name" label="Name">
               <Input />
             </Form.Item>

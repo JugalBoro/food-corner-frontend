@@ -30,7 +30,9 @@ const Homepage = () => {
         dispatch({
           type: "SHOW_LOADING",
         });
-        const { data } = await axios.get("/api/items/get-item");
+        const { data } = await axios.get(
+          "https://food-corner-backend.onrender.com/api/items/get-item"
+        );
         setItemsData(data);
         dispatch({ type: "HIDE_LOADING" });
         console.log(data);
@@ -49,8 +51,7 @@ const Homepage = () => {
             className={`d-flex category ${
               selecedCategory === category.name && "category-active"
             }`}
-            onClick={() => setSelecedCategory(category.name)}
-          >
+            onClick={() => setSelecedCategory(category.name)}>
             <h4>{category.name}</h4>
             <img
               src={category.imageUrl}

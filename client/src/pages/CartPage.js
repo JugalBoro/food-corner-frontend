@@ -96,7 +96,10 @@ const CartPage = () => {
         userId: JSON.parse(localStorage.getItem("auth"))._id,
       };
       // console.log(newObject);
-      await axios.post("/api/bills/add-bills", newObject);
+      await axios.post(
+        "https://food-corner-backend.onrender.com/api/bills/add-bills",
+        newObject
+      );
       message.success("Bill Generated");
       navigate("/bills");
     } catch (error) {
@@ -121,8 +124,7 @@ const CartPage = () => {
         title="Create Invoice"
         visible={billPopup}
         onCancel={() => setBillPopup(false)}
-        footer={false}
-      >
+        footer={false}>
         <Form layout="vertical" onFinish={handleSubmit}>
           <Form.Item name="customerName" label="Customer Name">
             <Input />
