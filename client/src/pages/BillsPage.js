@@ -23,7 +23,7 @@ const BillsPage = () => {
       );
       setBillsData(data);
       dispatch({ type: "HIDE_LOADING" });
-      console.log(data);
+      console.log(billsData);
     } catch (error) {
       dispatch({ type: "HIDE_LOADING" });
       console.log(error);
