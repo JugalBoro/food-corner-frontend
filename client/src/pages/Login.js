@@ -43,10 +43,10 @@ const Login = () => {
           <h3>Login Page</h3>
           <Form layout="vertical" onFinish={handleSubmit}>
             <Form.Item name="userId" label="User ID">
-              <Input />
+              <Input placeholder="please type:     aaa" />
             </Form.Item>
             <Form.Item name="password" label="Password">
-              <Input type="password" />
+              <Input type="password" placeholder="please type:     aaa" />
             </Form.Item>
 
             <div className="d-flex justify-content-between">
