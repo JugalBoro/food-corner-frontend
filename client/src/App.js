@@ -46,7 +46,7 @@ function App() {
             }
           />
           <Route
-            path="https://food-corner-backend.onrender.com/customers"
+            path="/customers"
             element={
           
                 <CutomerPage />
@@ -54,11 +54,11 @@ function App() {
             }
           />
           <Route
-            path="https://food-corner-backend.onrender.com/login"
+            path="/login"
             element={<Login />}
           />
           <Route
-            path="https://food-corner-backend.onrender.com/register"
+            path="/register"
             element={<Register />}
           />
         </Routes>
