@@ -14,7 +14,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route
-            path="https://food-corner-backend.onrender.com/"
+            path="/"
             element={
               <ProtectedRoute>
                 <Homepage />
@@ -22,7 +22,7 @@ function App() {
             }
           />
           <Route
-            path="https://food-corner-backend.onrender.com/items"
+            path="/get-item"
             element={
               <ProtectedRoute>
                 <ItemPage />
@@ -30,7 +30,7 @@ function App() {
             }
           />
           <Route
-            path="https://food-corner-backend.onrender.com/cart"
+            path="/cart"
             element={
               <ProtectedRoute>
                 <CartPage />
@@ -38,7 +38,7 @@ function App() {
             }
           />
           <Route
-            path="https://food-corner-backend.onrender.com/bills"
+            path="/bills"
             element={
               <ProtectedRoute>
                 <BillsPage />
