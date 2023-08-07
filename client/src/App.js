@@ -16,41 +16,41 @@ function App() {
           <Route
             path="/"
             element={
-              <ProtectedRoute>
+       
                 <Homepage />
-              </ProtectedRoute>
+             
             }
           />
           <Route
             path="/get-item"
             element={
-              <ProtectedRoute>
+            
                 <ItemPage />
-              </ProtectedRoute>
+
             }
           />
           <Route
             path="/cart"
             element={
-              <ProtectedRoute>
+            
                 <CartPage />
-              </ProtectedRoute>
+              
             }
           />
           <Route
             path="/bills"
             element={
-              <ProtectedRoute>
+           
                 <BillsPage />
-              </ProtectedRoute>
+          
             }
           />
           <Route
             path="https://food-corner-backend.onrender.com/customers"
             element={
-              <ProtectedRoute>
+          
                 <CutomerPage />
-              </ProtectedRoute>
+           
             }
           />
           <Route
