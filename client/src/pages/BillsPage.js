@@ -67,7 +67,7 @@ const BillsPage = () => {
       ),
     },
   ];
-  console.log(selectedBill);
+  //console.log(selectedBill);
   return (
     <DefaultLayout>
       <div className="d-flex justify-content-between">
