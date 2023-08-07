@@ -80,10 +80,4 @@ export function ProtectedRoute({ children }) {
 
 export default App;
 
-export function ProtectedRoute({ children }) {
-  if (localStorage.getItem("auth")) {
-    return children;
-  } else {
-    return <Navigate to="/login" />;
-  }
-}
+
